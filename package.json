@@ -4,19 +4,21 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "~6.1.0",
+    "@fitbit/sdk": "~4.3.0",
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "06838fa7-04db-42f8-b1bc-11d5857f35a9",
+    "appUUID": "862f60d4-e785-4136-b45f-7fe80cdcfc57",
     "appType": "clockface",
     "appDisplayName": "fitbitclockface",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
     "buildTargets": [
-      "atlas",
-      "vulcan"
+      "higgs",
+      "meson",
+      "gemini",
+      "mira"
     ],
     "i18n": {},
     "defaultLanguage": "en-US"
