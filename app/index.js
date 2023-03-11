@@ -1,7 +1,7 @@
 import clock from "clock";
 import * as document from "document";
 import { preferences } from "user-settings";
-import * as util from "../common/utils";
+import * as util from "./common/utils";
 import { HeartRateSensor } from "heart-rate";
 
 // Update the clock every minute
