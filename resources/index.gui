@@ -1,3 +1,5 @@
-<svg>
-  <rect id="background" />
+  <svg>
+  <image href="1.png" />
+  <text id="myLabel" />
 </svg>
+
