@@ -10,3 +10,36 @@
   height: 100%;
   fill: white;
 }
+#clock-label {
+    x: "40%";
+    y:"99%";
+    fill:"white";
+    font-size:"28";
+    font-family:"System-Regular";     
+}
+#hrmLabel {
+    x: "10%";
+    y: "99%";
+    fill: "white";
+    font-size: "28";
+    font-family: "System-Regular";
+}
+#stepsText {
+    x: "90%";
+    y: "99%";
+    fill: "white";
+    font-size: "28";
+    font-family: "System-Regular";
+}
+.screen {
+    width: 100%;
+    height: 100%;
+    viewport-fill: fb-cyan;
+}
+
+.item {
+    width: 100%;
+    height: 27%;
+    x: 0;
+    y: $+5%;
+}
