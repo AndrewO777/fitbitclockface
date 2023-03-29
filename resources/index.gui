@@ -1,7 +1,7 @@
   <svg>
   <image id="backgroundImage" href="1.png"/>
 
-	  <text id="stepsText" >0</text>
-	  <text id="hrmLabel" >00</text>
+	  <text id="stepsText" >00000</text>
+	  <text id="hrmLabel" ></text>
 	  <text id="clock-label" >00:00</text>
 </svg>

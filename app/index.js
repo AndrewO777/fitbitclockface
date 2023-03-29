@@ -59,7 +59,7 @@ if (HeartRateSensor) {
 if (todayActivity.adjusted != null) {
     let steps = todayActivity.adjusted.steps;
     let stepsText = "";
-    if (steps > 1000) {
+    /*if (steps > 1000) {
         let thousands = Math.floor(steps / 1000);
         stepsText += thousands;
         stepsText += ".";
@@ -70,7 +70,16 @@ if (todayActivity.adjusted != null) {
         if (steps < 100) {
             stepsText += "0";
         }
-    }
+    }*/
+    if (steps < 10)
+        stepsText += "0000"
+    else if (steps < 100)
+        stepsText += "000"
+    else if (steps < 1000)
+        stepsText += "00"
+    else if (steps < 1000)
+        stepsText += "0"
+    console.log(steps);
     stepsText += steps;
     sElem.text = stepsText;
 } else {
