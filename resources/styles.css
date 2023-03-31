@@ -32,6 +32,7 @@
     fill: "white";
     font-size: "28";
     font-family: "System-Regular";
+    text-length: 6;
 }
 .screen {
     width: 100%;

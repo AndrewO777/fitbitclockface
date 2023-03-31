@@ -15,8 +15,7 @@ let images = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.
 let imageIndex = Math.floor(Math.random() * 12);
 backgroundImage.href = images[imageIndex];
 
-clock.granularity = 'minutes';
-
+clock.granularity = 'seconds';
 // Get a handle on the <text> element
 
 //const act = GET https://api.fitbit.com/1/activities.json;
@@ -44,44 +43,30 @@ clock.ontick = (evt) => {
     imageIndex = newImageIndex;
     backgroundImage.href=images[imageIndex];
   }
+    if (todayActivity.adjusted != null) {
+        let steps = todayActivity.adjusted.steps;
+        let stepsText = "";
+        if (steps < 10)
+            sElem.x = 245;
+        else if (steps < 100)
+            sElem.x = 237;
+        else if (steps < 1000)
+            sElem.x = 230;
+        else if (steps < 10000)
+            sElem.x = 220;
+        stepsText += steps;
+        sElem.text = stepsText;
+    } else {
+        sElem.text = "--";
+    }
 }
 
 if (HeartRateSensor) {
   const hrm = new HeartRateSensor({ frequency: 1 });
   hrm.addEventListener("reading", () => {
-    console.log(`Current heart rate: ${hrm.heartRate}`);
     hrmLabel.text = `${hrm.heartRate}`;
   });
   hrm.start();
 }
 
 
-if (todayActivity.adjusted != null) {
-    let steps = todayActivity.adjusted.steps;
-    let stepsText = "";
-    /*if (steps > 1000) {
-        let thousands = Math.floor(steps / 1000);
-        stepsText += thousands;
-        stepsText += ".";
-        steps = steps - 1000 * thousands;
-        if (steps < 10) {
-            stepsText += "0";
-        }
-        if (steps < 100) {
-            stepsText += "0";
-        }
-    }*/
-    if (steps < 10)
-        stepsText += "0000"
-    else if (steps < 100)
-        stepsText += "000"
-    else if (steps < 1000)
-        stepsText += "00"
-    else if (steps < 1000)
-        stepsText += "0"
-    console.log(steps);
-    stepsText += steps;
-    sElem.text = stepsText;
-} else {
-    sElem.text = "--";
-}
